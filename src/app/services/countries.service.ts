@@ -17,7 +17,7 @@ export class CountriesService {
 
   getCountries(pageNumber: number=1): Observable<any[]>{
     return this.http.get<CountriesData>("/assets/data/db.json").pipe(switchMap((data) => {
-      pageNumber = (pageNumber <= 0 || typeof pageNumber !== "number")? 1 : pageNumber; 
+      // pageNumber = pageNumber <= 0 || typeof pageNumber !== "number" ? 1 : pageNumber; 
       let reqCountries: any[], total = pageNumber * 40, lowerLimit = total - 40 < 1? 1: total - 40;
       reqCountries = data.Countries.slice(total - 40, total);
       return of(reqCountries);

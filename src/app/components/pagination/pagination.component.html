@@ -1,0 +1,8 @@
+<section class="pagination-section">
+    <ng-container *ngFor="let page of numberOfPages">
+        <div class="page-no" (click)="goToPage(page)">
+          {{page}}
+        </div>
+      </ng-container>      
+</section>
+

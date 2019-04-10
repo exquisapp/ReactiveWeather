@@ -21,6 +21,7 @@ import * as AllEffects from './store/effects'
 
 //services
 import { CountriesService }from './services/countries.service';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CountriesService }from './services/countries.service';
     EachStateComponent,
     EachWeatherComponent,
     CountriesComponent,
-    StatesComponent
+    StatesComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

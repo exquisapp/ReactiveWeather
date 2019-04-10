@@ -10,9 +10,14 @@ export class EachCountryComponent implements OnInit {
   @Input()
   countryName: any;
 
-  constructor() { }
+  countryLink: string;
+
+  constructor() { 
+  }
 
   ngOnInit() {
+    this.countryLink = this.countryName.replace(/\s/g,'');
+
   }
 
 }

@@ -1,0 +1,11 @@
+.pagination-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    .page-no{
+        cursor: pointer;
+        padding: 12px;
+        margin: 4px;
+        background: #00aac8;
+    }
+}
