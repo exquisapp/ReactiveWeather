@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CountriesComponent } from './countries/countries.component';
-import { StatesComponent } from './states/states.component';
-import { EachWeatherComponent } from './each-weather/each-weather.component';
-import { NotfoundComponent } from './notfound/notfound.component';
+import { CountriesComponent } from './components/countries/countries.component';
+import { StatesComponent } from './components/states/states.component';
+import { EachWeatherComponent } from './components/each-weather/each-weather.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 const routes: Routes = [
   {

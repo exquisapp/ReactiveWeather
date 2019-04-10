@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-each-country',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./each-country.component.scss']
 })
 export class EachCountryComponent implements OnInit {
+
+  @Input()
+  countryName: any;
 
   constructor() { }
 
