@@ -26,6 +26,18 @@ export class CountriesEffect {
         })
     );
 
+    @Effect()
+    readStates = this.actions$.pipe(
+        ofType(CountriesActions.READ_STATES),
+        switchMap((action: CountriesActions.readStates) => {
+            return this.countriesService.getStates(action.payload)
+            .pipe(
+                map(data => new CountriesActions.getStates(data)),
+                catchError(error => of(new CountriesActions.getStatesFailed(error)))
+            )
+        })
+    )
+
 
 
 }

@@ -1,11 +1,18 @@
 import * as CountriesActions from './../actions';
 
+export interface currentState{
+    States: any[];
+    countryName: string;
+}
+
 export interface CountriesState{
-    countries: any[]
+    countries: any[];
+    currentState: currentState;
 } 
 
 const initialState: CountriesState = {
-    countries: []
+    countries: [],
+    currentState: []
 }
 
 export function cReducer (state: CountriesState = initialState, action: CountriesActions.cActions): CountriesState{
@@ -14,6 +21,12 @@ export function cReducer (state: CountriesState = initialState, action: Countrie
             return {
                 ...state,
                 countries: action.payload
+            }
+        }
+        case CountriesActions.GET_STATES:{
+            return {
+                ...state,
+                currentState: action.payload
             }
         }
     }

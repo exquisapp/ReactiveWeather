@@ -24,4 +24,13 @@ export class CountriesService {
     })
     )
   }
+
+  getStates(country: string){
+    return this.http.get<CountriesData>("/assets/data/db.json").pipe(
+      switchMap((data) => {
+        let reqStates = data.Countries.filter(data => data.CountryName === country.replace(/\s/g,''))
+        return reqStates;
+      })
+    )
+  }
 }

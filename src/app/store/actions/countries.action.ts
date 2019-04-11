@@ -18,7 +18,7 @@ export class getCountriesFailed implements Action{
 }
 
 export class getStates implements Action{
-    readonly type = GET_COUNTRIES;
+    readonly type = GET_STATES;
     constructor(public payload: any){}
 }
 
@@ -34,6 +34,7 @@ export class readCountries implements Action {
 
 export class readStates implements Action {
     readonly type = READ_STATES
+    constructor(public payload: any){}
 }
 
 export type cActions = getCountries | getStates | readCountries | readStates | getCountriesFailed | getStatesFailed;

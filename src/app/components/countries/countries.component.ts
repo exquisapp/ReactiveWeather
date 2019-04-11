@@ -17,6 +17,7 @@ import { filter } from 'rxjs/operators';
 export class CountriesComponent implements OnInit {
   public currentPageNumber = 1;
   public countries: any[];
+  public route$;
   constructor(private store: Store<Countries.CountriesState>, private route: ActivatedRoute, private router : Router) {
 
    }
@@ -27,7 +28,7 @@ export class CountriesComponent implements OnInit {
       this.countries = data.countries;
       console.log(data)
     });
-    this.route.queryParams.pipe(
+    this.route$ = this.route.queryParams.pipe(
       filter(params => params.page)
     ).subscribe(query => {
       let { page } = query;
@@ -44,6 +45,8 @@ export class CountriesComponent implements OnInit {
 
   ngOnChanges(){
 
+  }
+  ngOnDestroy(){
   }
 
 }
