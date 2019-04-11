@@ -23,7 +23,6 @@ import * as AllEffects from './store/effects'
 import { CountriesService }from './services/countries.service';
 import { PaginationComponent } from './components/pagination/pagination.component';
 
-const { CountriesEffect, WeatherEffect} = AllEffects;
 
 @NgModule({
   declarations: [
@@ -42,7 +41,7 @@ const { CountriesEffect, WeatherEffect} = AllEffects;
     HttpClientModule,
     AppRoutingModule,
     StoreModule.forRoot(allReducers),
-    EffectsModule.forRoot([CountriesEffect, WeatherEffect])
+    EffectsModule.forRoot([AllEffects.CountriesEffect, AllEffects.WeatherEffect])
   ],
   providers: [
     CountriesService
