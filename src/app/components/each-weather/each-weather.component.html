@@ -1,3 +1,32 @@
-<p>
-  each-weather works!
-</p>
+<ng-container *ngIf="weatherData.location.country">
+    <section class="each-weather">
+      <div class="location-details">
+          <h4>Country : {{weatherData.location.country}}</h4>
+          <div>Region: {{weatherData.location.region}}</div>
+          <div>Lat : {{weatherData.location.lat}}</div>
+          <div>Long : {{weatherData.location.lon}}</div>
+      </div>
+ 
+      
+        <div class="wrapper">
+          <div class="current-weather">
+            Current Weather<br />
+            Condition: {{ weatherData.current.condition.text}}<br />
+            <img [src]="weatherData.current.condition.icon"  /><br />
+            Temperature : {{weatherData.current.temp_c}}°C | {{ weatherData.current.temp_f}}°F<br />
+      
+            humidity: {{ weatherData.current.humidity }}<br />
+      
+      
+          </div>
+          <div class="weather-forecast">
+            Weather Forecast
+            Condition: {{ weatherData.current.condition.text}}<br />
+            <img [src]="weatherData.current.condition.icon"  /><br />
+            Temperature : {{weatherData.current.temp_c}}°C | {{ weatherData.current.temp_f}}°F<br />
+      
+            humidity: {{ weatherData.current.humidity }}<br />
+          </div>
+        </div>
+      </section>
+</ng-container>

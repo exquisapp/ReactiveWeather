@@ -1,1 +1,2 @@
-export * from './countries.effect';
+export { CountriesEffect } from './countries.effect';
+export { WeatherEffect } from './weather.effect';

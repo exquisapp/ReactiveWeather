@@ -7,7 +7,7 @@ export interface currentState{
 
 export interface CountriesState{
     countries: any[];
-    currentState: currentState;
+    currentState: any;
 } 
 
 const initialState: CountriesState = {
