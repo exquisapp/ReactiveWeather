@@ -16,7 +16,7 @@ export class EachCountryComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.countryLink = this.countryName.replace(/\s/g,'');
+    this.countryLink = this.countryName;
 
   }
 
